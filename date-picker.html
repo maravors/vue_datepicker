@@ -114,7 +114,7 @@
     <div class="content">
       <ul>
           <li v-for="(lday,l_index) in lastMonthDays" @click="toLastMonth" class="lastmonth" :key="'ls_'+l_index">{{ lday }}</li>
-          <li v-for="(day,index) in days" @click="showDate(day)" :class="{'today' : index === today , 'on-date': defaultDate.indexOf(day) > 0}" :key="index">{{ day }}</li>
+          <li v-for="(day,index) in days" @click="showDate(day)" :class="{'today' : index === today , 'on-date': defaultDate.indexOf(day) >= 0}" :key="index">{{ day }}</li>
           <li v-for="(nday , nindex) in nextMonthDays" @click="toNextMonth" class="lastmonth" :key="'next_'+nindex" >{{ nday }}</li>
       </ul>
     </div>
